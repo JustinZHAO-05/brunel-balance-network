@@ -8,11 +8,11 @@
   <a href="https://github.com/JustinZHAO-05/brunel-balance-network/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-0f172a" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/python-3.10-1d4ed8" alt="Python 3.10" />
   <img src="https://img.shields.io/badge/Brian2-2.7.1-059669" alt="Brian2 2.7.1" />
-  <img src="https://img.shields.io/badge/vibe%20coding-Codex%20GPR--5.4-c2410c" alt="Codex GPR-5.4 vibe coding" />
+  <img src="https://img.shields.io/badge/vibe%20coding-Codex%20GPT--5.4-c2410c" alt="Codex GPT-5.4 vibe coding" />
   <img src="https://img.shields.io/github/last-commit/JustinZHAO-05/brunel-balance-network?color=7c3aed" alt="Last commit" />
 </p>
 
-一个面向展示的计算神经科学微项目：用 `Brian2` 复现 Brunel 2000 稀疏兴奋/抑制脉冲网络中的经典群体活动状态，并把整个项目的实现过程显式记录为一次 `codex GPR-5.4 vibe coding` 实验。
+一个面向展示的计算神经科学微项目：用 `Brian2` 复现 Brunel 2000 稀疏兴奋/抑制脉冲网络中的经典群体活动状态，并把整个项目的实现过程显式记录为一次 `codex GPT-5.4 vibe coding` 实验。
 
 ## What This Repo Shows
 
@@ -82,7 +82,7 @@ python -m src.reproduce --preset poster
 - 日志：[`docs/vibe_log.md`](docs/vibe_log.md)
 - 报告：[`docs/report.md`](docs/report.md)
 
-项目主页和仓库文案都明确保留了这个事实：本项目使用 `codex GPR-5.4 vibe coding` 完成。
+项目主页和仓库文案都明确保留了这个事实：本项目使用 `codex GPT-5.4 vibe coding` 完成。
 
 ## References
 

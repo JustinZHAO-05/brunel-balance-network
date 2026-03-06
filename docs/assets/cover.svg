@@ -57,7 +57,7 @@
   <g fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif">
     <text x="120" y="170" font-size="76" font-weight="700">Brunel Balance Network</text>
     <text x="120" y="235" font-size="34" fill="#CBD5E1">Computational neuroscience microproject with Brian2</text>
-    <text x="120" y="290" font-size="30" fill="#F97316">Built with codex GPR-5.4 vibe coding</text>
+    <text x="120" y="290" font-size="30" fill="#F97316">Built with codex GPT-5.4 vibe coding</text>
   </g>
 
   <defs>
