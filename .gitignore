@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.vscode/
+*.pyc
+artifacts/runs/
+artifacts/sweeps/
+artifacts/reproductions/
+artifacts/acceptance.json

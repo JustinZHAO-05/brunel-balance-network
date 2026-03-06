@@ -1,0 +1,7 @@
+brian2==2.7.1
+numpy
+scipy
+matplotlib
+pandas
+pyyaml
+pytest

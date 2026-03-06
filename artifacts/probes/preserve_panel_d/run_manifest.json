@@ -1,0 +1,10 @@
+{
+  "external_input_count": 1000,
+  "n_exc": 2500,
+  "n_inh": 625,
+  "n_recorded": 80,
+  "name": "probe_preserve_panel_d",
+  "seed": 104,
+  "sim_time_ms": 1200.0,
+  "total_neurons": 3125
+}

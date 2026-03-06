@@ -1,0 +1,14 @@
+{
+  "analysis_window_end_ms": 1200.0,
+  "analysis_window_start_ms": 1000.0,
+  "fano_factor": 0.06975403535741737,
+  "mean_firing_rate_hz": 78.52533333333332,
+  "median_cv_isi": 0.1489190259644318,
+  "pairwise_correlation": -0.010814547696329644,
+  "pairwise_correlation_pairs": 80,
+  "psd_peak_frequency_hz": 87.89062500007994,
+  "psd_peak_power": 9.858153484168533,
+  "recorded_mean_rate_hz": 81.31249999999999,
+  "spike_count": 1301,
+  "valid_cv_neuron_count": 80
+}
