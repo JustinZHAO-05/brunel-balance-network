@@ -28,6 +28,14 @@
 - `Figure 3`：关键指标 + 自动验收结果
 - `artifacts/acceptance.json`：规则级判定结果
 
+## Presentation Materials
+
+- 报告：[`deliverables/project_report.md`](deliverables/project_report.md)
+- 报告 HTML：[`deliverables/project_report.html`](deliverables/project_report.html)
+- A1 Poster：[`deliverables/brunel_balance_network_poster_a1.pptx`](deliverables/brunel_balance_network_poster_a1.pptx)
+- 汇报 PPT：[`deliverables/brunel_balance_network_presentation.pptx`](deliverables/brunel_balance_network_presentation.pptx)
+- Poster 预览图：[`deliverables/assets/poster_a1.png`](deliverables/assets/poster_a1.png)
+
 ## Project Story
 
 这个仓库不是为了追求论文级数值完全一致，而是为了回答一个更实际的问题：

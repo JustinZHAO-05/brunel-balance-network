@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Brunel Balance Network 项目报告</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; }
+    main { max-width: 1080px; margin: 0 auto; padding: 48px 32px 80px; }
+    h1, h2, h3 { color: #0b1b32; }
+    p, li { line-height: 1.65; }
+    img { max-width: 100%; border: 1px solid #cbd5e1; border-radius: 12px; background: white; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0 32px; background: white; }
+    th, td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 14px; }
+    th { background: #e2e8f0; }
+    code, pre { background: #e2e8f0; border-radius: 6px; }
+    pre { padding: 16px; overflow-x: auto; }
+    .hero { background: linear-gradient(135deg, #0b1b32, #1f4e79); color: white; padding: 28px 32px; border-radius: 18px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <h1>Brunel Balance Network 项目报告</h1>
+      <p>Brian2-based computational neuroscience microproject built with codex GPT-5.4 vibe coding.</p>
+    </div>
+    <h2>1. 项目概述</h2>
+    <p>本项目实现了一个基于 Brian2 的 Brunel 平衡网络复现仓库，目标是用一个足够小、但足够真实的计算神经科学任务验证 <code>codex GPT-5.4 vibe coding</code> 的端到端交付能力。项目覆盖模型配置、仿真、分析、扫参、自动验收，以及最终的公开展示材料生成。</p>
+    <h2>2. 研究问题</h2>
+    <p>在真实的 Brunel 平衡网络任务里，代理是否能端到端地完成可运行、可解释、可展示、可开源的研究型微项目？</p>
+    <h2>3. 模型与实验设计</h2>
+    <ul>
+      <li>模型：current-based LIF 兴奋/抑制网络</li>
+      <li>框架：Brian2 2.7.1</li>
+      <li>关键参数：<code>g</code>、<code>nu_ext / nu_thr</code></li>
+      <li>核心预设：A/B/C/D 四个 canonical panels</li>
+      <li>扫参：在 <code>g x nu_ext / nu_thr</code> 网格上批量运行</li>
+    </ul>
+    <h2>4. 主要图表</h2>
+    <h3>Figure 1. Canonical panels</h3>
+    <img src="../artifacts/reproductions/poster/figure1_panels.png" alt="Figure 1" />
+    <h3>Figure 2. Poster-scale phase diagram</h3>
+    <img src="../artifacts/reproductions/poster/figure2_phase_diagram.png" alt="Figure 2" />
+    <h3>Figure 3. Metrics and acceptance</h3>
+    <img src="../artifacts/reproductions/poster/figure3_metrics.png" alt="Figure 3" />
+    <h2>5. Quick 结果摘要</h2>
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>panel</th>
+      <th>mean_firing_rate_hz</th>
+      <th>median_cv_isi</th>
+      <th>pairwise_correlation</th>
+      <th>psd_peak_power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>125.851</td>
+      <td>0.089</td>
+      <td>-0.042</td>
+      <td>7.386</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>149.024</td>
+      <td>0.132</td>
+      <td>-0.012</td>
+      <td>21.221</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>78.525</td>
+      <td>0.149</td>
+      <td>-0.011</td>
+      <td>9.858</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>3.240</td>
+      <td>0.092</td>
+      <td>-0.014</td>
+      <td>0.023</td>
+    </tr>
+  </tbody>
+</table>
+    <p>Quick 验收：<strong>3/4</strong> 规则通过。</p>
+    <h2>6. Poster 结果摘要</h2>
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>panel</th>
+      <th>mean_firing_rate_hz</th>
+      <th>median_cv_isi</th>
+      <th>pairwise_correlation</th>
+      <th>psd_peak_power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>190.886</td>
+      <td>0.089</td>
+      <td>0.022</td>
+      <td>93.383</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>102.011</td>
+      <td>0.246</td>
+      <td>0.004</td>
+      <td>39.616</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>63.646</td>
+      <td>0.214</td>
+      <td>0.017</td>
+      <td>6.259</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>3.200</td>
+      <td>0.130</td>
+      <td>0.009</td>
+      <td>0.135</td>
+    </tr>
+  </tbody>
+</table>
+    <p>Poster 验收：<strong>3/4</strong> 规则通过。</p>
+    <h2>7. 验收规则逐项结果</h2>
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>preset</th>
+      <th>rule</th>
+      <th>passed</th>
+      <th>detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>quick</td>
+      <td>async_corr_lt_sync</td>
+      <td>PASS</td>
+      <td>|sync|=0.0273, |async|=0.0125</td>
+    </tr>
+    <tr>
+      <td>quick</td>
+      <td>async_cv_near_irregular</td>
+      <td>FAIL</td>
+      <td>median async CV(ISI)=0.1202</td>
+    </tr>
+    <tr>
+      <td>quick</td>
+      <td>required_outputs_present</td>
+      <td>PASS</td>
+      <td>4/4 required files found</td>
+    </tr>
+    <tr>
+      <td>quick</td>
+      <td>sync_peak_power_gt_async</td>
+      <td>PASS</td>
+      <td>sync=14.3036, async=4.9404</td>
+    </tr>
+    <tr>
+      <td>poster</td>
+      <td>async_corr_lt_sync</td>
+      <td>PASS</td>
+      <td>|sync|=0.0131, |async|=0.0128</td>
+    </tr>
+    <tr>
+      <td>poster</td>
+      <td>async_cv_near_irregular</td>
+      <td>FAIL</td>
+      <td>median async CV(ISI)=0.1722</td>
+    </tr>
+    <tr>
+      <td>poster</td>
+      <td>required_outputs_present</td>
+      <td>PASS</td>
+      <td>4/4 required files found</td>
+    </tr>
+    <tr>
+      <td>poster</td>
+      <td>sync_peak_power_gt_async</td>
+      <td>PASS</td>
+      <td>sync=66.4999, async=3.1974</td>
+    </tr>
+  </tbody>
+</table>
+    <h2>8. Poster Sweep 高亮点</h2>
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>g</th>
+      <th>nu_ext_over_nu_thr</th>
+      <th>mean_firing_rate_hz</th>
+      <th>median_cv_isi</th>
+      <th>psd_peak_power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4.500</td>
+      <td>4.000</td>
+      <td>173.008</td>
+      <td>0.128</td>
+      <td>88.129</td>
+    </tr>
+    <tr>
+      <td>4.000</td>
+      <td>4.000</td>
+      <td>196.512</td>
+      <td>0.108</td>
+      <td>80.524</td>
+    </tr>
+    <tr>
+      <td>5.000</td>
+      <td>4.000</td>
+      <td>153.124</td>
+      <td>0.160</td>
+      <td>76.817</td>
+    </tr>
+    <tr>
+      <td>6.000</td>
+      <td>4.000</td>
+      <td>121.777</td>
+      <td>0.216</td>
+      <td>51.084</td>
+    </tr>
+    <tr>
+      <td>5.500</td>
+      <td>4.000</td>
+      <td>135.589</td>
+      <td>0.184</td>
+      <td>45.466</td>
+    </tr>
+    <tr>
+      <td>3.000</td>
+      <td>0.900</td>
+      <td>20.353</td>
+      <td>0.330</td>
+      <td>37.688</td>
+    </tr>
+  </tbody>
+</table>
+    <h2>9. 结果解释</h2>
+    <ul>
+      <li>A/B 条件在 population-rate peak power 上显著高于 C/D，与同步活动更强的预期一致。</li>
+      <li>C/D 条件在 pairwise correlation 的绝对值上整体低于 A/B，异步特征方向基本成立。</li>
+      <li>当前主要缺口是 <code>async_cv_near_irregular</code> 规则未通过，说明 C/D 的不规则性仍不够强。</li>
+      <li>这一失败被保留在自动验收中，而不是被手工美化或隐藏。</li>
+    </ul>
+    <h2>10. 复现命令</h2>
+    <pre><code>python -m src.reproduce --preset quick
+python -m src.reproduce --preset poster
+python scripts/build_deliverables.py</code></pre>
+  </main>
+</body>
+</html>
